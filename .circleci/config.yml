@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/vue-recaptcha
     docker:
-      - image: circleci/node:16-browsers
+      - image: circleci/node:17-browsers
     steps:
       - checkout
       - restore_cache:
@@ -28,7 +28,7 @@ jobs:
           path: reports
   deploy:
     docker:
-      - image: circleci/node:16
+      - image: circleci/node:17
     working_directory: ~/vue-recaptcha
     steps:
       - checkout
